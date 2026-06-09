@@ -1,0 +1,230 @@
+/* 상단시작 */
+body{
+    background-color: rgb(211, 211, 211);
+}
+nav{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
+    height: 90px;
+    background-color: lightgray;
+    color: black;
+    display: flex;
+    justify-content: center; 
+    /* align-items: start; */
+    transition: all 0.3s;
+    overflow: hidden;
+    z-index: 10;
+}
+.nav.on{
+    height: 490px;
+    /* background-color: aqua; */
+}
+/* 상단종료 */
+
+/* 로고시작 */
+.logoBox{
+    width: 20%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoBox img {
+    height: 50px; /* 90px 높이 안에서 로고가 예쁘게 보일 세로 크기 */
+    width: auto; /* 세로 높이에 맞춰서 가로 크기가 원본 비율대로 자동 조절 */
+    object-fit: contain;
+    display: block
+}
+/* 로고종료  */
+
+/* gnb시작 */
+.gnb{
+    width: 70%;
+    height: 90px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.gnb > li{
+    width: calc(95%/4);
+    height: 90px;
+}
+.gnb > li > a {         
+    width: 100%;
+    height: 90px;
+    /* background-color: gold; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;            
+}
+/* gnb종료 */
+
+/* snb시작 */
+.snb{
+    /* margin-top: 20px; */
+    width: 100%;
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+}
+/* snb종료 */
+
+/* 햄버거바시작 */
+.ham {
+    width: 25px;          
+    height: 25px;         
+    display: flex;
+    flex-wrap: wrap;   
+    gap: 5px;             
+    cursor: pointer;
+    transform: translate(-20px, 32px);
+}
+.ham span {
+    width: 10px;          
+    height: 10px;         
+    background-color: #333;
+    border-radius: 50%;   
+}
+/* 햄버거바종료 */
+
+/* 풀메뉴시작 */
+p{
+    font-size: 50px;
+}
+.fullmenu{
+    width: 100%;
+    height: 100vh;
+    background-color:black;
+    color: white;
+    position: fixed;
+    left: 0; top: -120%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.fullmenu.on{
+    top: 0;
+}
+.closebtn{
+    position: absolute; 
+    right: 30px; top: 30px;
+    width: 30px;
+    height: 30px;
+    border-radius: 1px;
+    /* background-color: aqua; */
+    font-size: 25px; 
+    font-weight: bold;
+    color: white;
+}
+.fullmenugnb{
+    width: 80%;
+    height: 80%;
+    /* background-color: blue; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+    /* gap: 100px; */
+}
+.fullmenugnb > li{
+    width: calc(90%/4);
+    height: 100%;
+    /* background-color: pink; */
+    margin-top: 10px; 
+}
+.fullmenugnb > li > a{
+    display: block; 
+    width: 100%;
+    height: 50px;
+    /* background-color: blueviolet; */
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+/* 풀 메뉴 종료 */
+
+/*  */
+body{
+ background-color: lightgrey;
+}
+.showroom {
+  width: 95%;
+  margin: 100px auto;
+  padding: 8%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+/* 첫번째시작 */
+.showroom .title {
+  text-align: center;
+  font-size: 60px; /* 적절한 크기로 조정 */
+  margin-bottom: 50px
+}
+.showroom .title span{
+  font-size: 20px; 
+  margin-left: 10px; /* 영어와 한글 사이의 좌우 간격 추가 */
+  color: #444;
+}
+/* 메인 레이아웃 */
+.showroom .content {
+  display: flex;
+  gap: 30px; /* 좌우 간격 */
+  align-items: stretch; /* 왼쪽 이미지가 오른쪽 높이를 따라가게 함 */
+}
+/* 왼쪽 세로 이미지 박스 */
+.showroom .pic-long {
+  flex: 1;
+}
+.showroom .pic-long img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지가 찌그러지지 않게 꽉 채움 */
+  border-radius: 10px;
+}
+/* 오른쪽 콘텐츠 박스 (이미지 + 텍스트) */
+.showroom .desc-side {
+  flex: 1.5;
+  display: flex;
+  flex-direction: column;
+  text-align: right; /* 이미지처럼 오른쪽 정렬 */
+}
+.showroom .desc-side img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+/* 텍스트 스타일 */
+.showroom .text .brand {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+.showroom .text h2 {
+  font-size: 50px;
+  font-weight: 300; /* 얇은 폰트 느낌 */
+  line-height: 1.4;
+  margin-bottom: 60px;
+}
+.showroom .text .sub {
+  font-size: 18px;
+  color: #888
+}
+/* 첫번째종료 */
+
+/* 두번째시작 */
+
+/* 두번째종료 */
